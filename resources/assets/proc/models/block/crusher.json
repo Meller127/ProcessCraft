@@ -1,0 +1,13 @@
+{
+    "__comment": "Model generated using MrCrayfish's Model Creator (http://mrcrayfish.com/modelcreator/)",
+    "parent": "block/cube",
+    "textures": {
+      "particle": "proc:blocks/BlockCrusherFront",
+      "down": "proc:blocks/BlockCrusherSide",
+      "up": "proc:blocks/BlockCrusherSide2",
+      "east": "proc:blocks/BlockCrusherSide3",
+      "west": "proc:blocks/BlockCrusherSide4",
+      "north": "proc:blocks/BlockCrusherFront",
+      "south": "proc:blocks/BlockCrusherSide5"
+    }
+}

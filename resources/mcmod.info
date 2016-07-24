@@ -1,0 +1,16 @@
+[
+{
+  "modid": "proc",
+  "name": "Processcraft",
+  "description": "A mod about industrial processes",
+  "version": "0.0.1",
+  "mcversion": "1.9.4",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Meller"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
