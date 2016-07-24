@@ -22,7 +22,6 @@ public class TileCrusher extends TileEntity implements ITickable
 	private int clickTimes;
 	
 	private BlockPos pos = this.getPos();
-	private int clicks;
 	
 
 	@Override
