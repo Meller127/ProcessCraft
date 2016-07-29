@@ -30,7 +30,6 @@ public class Processcraft {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
-		ModTileEntities.registerTileEntities();
 		ModItems.init();
 		ModItems.register();
 		
@@ -42,6 +41,8 @@ public class Processcraft {
 	public void init(FMLInitializationEvent event)
 	{
 		proxy.init();
+		
+		ModTileEntities.registerTileEntities();
 	}
 	
 	@EventHandler
