@@ -29,7 +29,6 @@ public class BlockCrusher extends Block implements ITileEntityProvider
 	
 	private BlockPos pos;
 	
-
 	public BlockCrusher() 
 	{
 		super(Material.IRON);
@@ -111,4 +110,5 @@ public class BlockCrusher extends Block implements ITileEntityProvider
 	{
 		return true;
 	}
+	
 }
