@@ -18,9 +18,9 @@ public class TileCrusherContainer extends Container
 		this.playerInv = playerInv;
 		
 		// Tile Entity, Slot 0-8, Slot IDs 0-8
-	    for (int y = 0; y < 3; ++y) {
-	        for (int x = 0; x < 3; ++x) {
-	            this.addSlotToContainer(new Slot(te, x + y * 3, 62 + x * 18, 17 + y * 18));
+	    for (int y = 0; y < 1; ++y) {
+	        for (int x = 0; x < 2; ++x) {
+	            this.addSlotToContainer(new Slot(te, x + y * 2, 45 + x * 71, 35 + y * 18));
 	        }
 	    }
 
