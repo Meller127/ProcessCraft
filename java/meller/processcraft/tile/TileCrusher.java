@@ -6,33 +6,52 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextComponentTranslation;
 
 public class TileCrusher extends TileEntity implements IInventory
 {
 	private ItemStack[] inventory;
-	private String CustomName; // TODO, rename in an anvil
+	private String customName; // TODO, rename in an anvil
 	
 	public TileCrusher()
 	{
 		this.inventory = new ItemStack[this.getSizeInventory()];
 	}
+	
+	public String getCustomName() 
+	{
+        return this.customName;
+    }
+	
+	public void setCustomName(String customName) 
+	{
+        this.customName = customName;
+    }
 
 	@Override
 	public String getName() 
 	{
-		return this.getName();
+		return this.hasCustomName() ? this.customName : "Crusher";
 	}
 
 	@Override
 	public boolean hasCustomName() 
 	{
-		return false;
+		return this.customName != null && !this.customName.equals("");
 	}
+	
+	@Override
+	public ITextComponent getDisplayName() {
+	    return this.hasCustomName() ? new TextComponentString(this.getName()) : new TextComponentTranslation(this.getName());
+	}
+
 
 	@Override
 	public int getSizeInventory() 
 	{
-		return 3;
+		return 2;
 	}
 
 	@Override
