@@ -2,6 +2,7 @@ package meller.processcraft.blocks;
 
 import meller.processcraft.Processcraft;
 import meller.processcraft.Reference;
+import meller.processcraft.gui.GuiHandler;
 import meller.processcraft.tile.TileCrusher;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
@@ -121,5 +122,17 @@ public class BlockCrusher extends Block implements ITileEntityProvider
 		TileCrusher te = (TileCrusher) world.getTileEntity(pos);
 	    InventoryHelper.dropInventoryItems(world, pos, te);
 	    super.breakBlock(world, pos, state);
+	}
+	
+	@Override
+	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn,
+			EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) 
+	{
+		if (!worldIn.isRemote)
+		{
+			playerIn.openGui(Processcraft.instance, GuiHandler.MOD_TILE_ENTITY_GUI, worldIn, pos.getX(), pos.getY(), pos.getZ());
+		}
+		
+	return true;
 	}
 }
