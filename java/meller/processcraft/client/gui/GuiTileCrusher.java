@@ -9,7 +9,6 @@ import net.minecraft.util.ResourceLocation;
 
 public class GuiTileCrusher extends GuiContainer
 {
-
 	private IInventory playerInv;
 	private TileCrusher te;
 
@@ -36,8 +35,8 @@ public class GuiTileCrusher extends GuiContainer
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) 
 	{
 		String s = this.te.getDisplayName().getUnformattedText();
-	    this.fontRendererObj.drawString(s, 88 - this.fontRendererObj.getStringWidth(s) / 2, 6, 4210752);            //#404040
-	    this.fontRendererObj.drawString(this.playerInv.getDisplayName().getUnformattedText(), 8, 72, 4210752);      //#404040
+	    this.fontRendererObj.drawString(s, 88 - this.fontRendererObj.getStringWidth(s) / 2, 6, 4210752);
+	    this.fontRendererObj.drawString(this.playerInv.getDisplayName().getUnformattedText(), 8, 72, 4210752);
 	}
 
 }
