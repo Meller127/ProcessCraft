@@ -20,8 +20,8 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_VERSION)
-public class Processcraft {
-	
+public class Processcraft 
+{
 	@Instance
 	public static Processcraft instance;
 	

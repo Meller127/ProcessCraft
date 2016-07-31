@@ -10,7 +10,8 @@ public class Reference {
 	public static final String CLIENT_PROXY_CLASS = "meller.processcraft.proxy.ClientProxy";
 	public static final String SERVER_PROXY_CLASS = "meller.processcraft.proxy.ServerProxy";
 	
-	public static enum ProcesscraftItems {
+	public static enum ProcesscraftItems 
+	{
 		EXSTOP("exstop", "ItemexStop");
 		
 		private String unlocalizedName;
@@ -19,7 +20,7 @@ public class Reference {
 		ProcesscraftItems(String unlocalizedName, String registryName){
 			this.unlocalizedName = unlocalizedName;
 			this.registryName = registryName;
-		}
+	}
 		
 		public String getUnlocalizedName() 
 		{

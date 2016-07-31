@@ -13,7 +13,7 @@ import net.minecraft.util.text.TextComponentTranslation;
 public class TileCrusher extends TileEntity implements IInventory
 {
 	private ItemStack[] inventory;
-	private String customName; // TODO, rename in an anvil
+	private String customName;
 	
 	public TileCrusher()
 	{
@@ -43,7 +43,8 @@ public class TileCrusher extends TileEntity implements IInventory
 	}
 	
 	@Override
-	public ITextComponent getDisplayName() {
+	public ITextComponent getDisplayName() 
+	{
 	    return this.hasCustomName() ? new TextComponentString(this.getName()) : new TextComponentTranslation(this.getName());
 	}
 
