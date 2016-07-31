@@ -13,6 +13,7 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
@@ -112,5 +113,13 @@ public class BlockCrusher extends Block implements ITileEntityProvider
 	public boolean hasTileEntity() 
 	{
 		return true;
+	}
+	
+	@Override
+	public void breakBlock(World world, BlockPos pos, IBlockState state) 
+	{
+		TileCrusher te = (TileCrusher) world.getTileEntity(pos);
+	    InventoryHelper.dropInventoryItems(world, pos, te);
+	    super.breakBlock(world, pos, state);
 	}
 }
