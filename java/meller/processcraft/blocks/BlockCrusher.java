@@ -40,6 +40,7 @@ public class BlockCrusher extends Block implements ITileEntityProvider
 		setHarvestLevel("pickaxe", 2);
 		setResistance(20F);
 		this.setCreativeTab(Processcraft.CREATIVE_TAB);
+		this.isBlockContainer = true;
 		
 		setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 	}
