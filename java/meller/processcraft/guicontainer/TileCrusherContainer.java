@@ -54,9 +54,9 @@ public class TileCrusherContainer extends Container
 	        ItemStack current = slot.getStack();
 	        previous = current.copy();
 
-	        if (index < 9) {
+	        if (index < 2) {
 	            // From TE Inventory to Player Inventory
-	            if (!this.mergeItemStack(current, 9, 45, true))
+	            if (!this.mergeItemStack(current, 2, 38, true))
 	                return null;
 	        } else {
 	            // From Player Inventory to TE Inventory
@@ -75,5 +75,4 @@ public class TileCrusherContainer extends Container
 	    }
 	    return previous;
 	}
-
 }
